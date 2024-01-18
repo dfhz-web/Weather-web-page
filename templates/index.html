@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Weather conditions</title>
+    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Get Weather conditions</h1>
+     Basically when we use the action= weather, is the reference to the @app.route('/weather') -->
+<!-- <form action="/weather">
+    <input type="text" name="city" id="city" placeholder="Enter a city">
+    <button type="submit">Submit</button>
+</form>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Weather conditions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
+
+
+    <style>
+        body {
+            background-image: url('/static/styles/images/weather.jpeg');
+            /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-light d-flex align-items-center justify-content-center vh-100">
+    <div class="container">
+        <h1 class="text-center mb-4">Get Weather Conditions</h1>
+        <form action="/weather" method="get">
+            <div class="mb-3">
+                <input type="text" name="city" id="city" class="form-control" placeholder="Enter a city" required>
+            </div>
+            <div class="d-grid gap-2">
+                <!-- <div class="d-flex align-items-center justify-content-center"> -->
+
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (optional, for certain components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
